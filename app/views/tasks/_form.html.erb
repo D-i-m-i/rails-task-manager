@@ -1,0 +1,10 @@
+<%= form_for(@task) do |f| %>
+<%= f.text_field :title, placeholder: "title" %>
+<%= f.text_field :details, placeholder: "details" %>
+
+<% if !@task.new_record? %>
+<%= f.text_field :completed, placeholder: "completion status" %>
+<% end %>
+
+<%= f.submit %>
+<% end %>
